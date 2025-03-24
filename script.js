@@ -19,7 +19,7 @@ function getComputerChoice() {
 // INITIALIZE getHumanChoice
 function getHumanChoice() {
     // collect user input (rock paper or scissor) 
-    let humanInput = prompt("What's your choice? Best game out of 5!");
+    let humanInput = prompt("What's your choice?");
     // LOG humanInput 
     console.log(humanInput);
     // return choice
@@ -73,29 +73,23 @@ function playRound(humanChoice, computerChoice) {
     } else if (humanChoice === 0 && computerChoice === 1) {
         winner = "computer";
         console.log(`Computer wins this round. Paper beats rock!`);
-        alert(`Computer wins this round. Paper beats rock!`);
     } else if (humanChoice === 0 && computerChoice === 2) {
         winner = "player";
         console.log(`Player wins this round. Rock beats scissors!`);
-        alert(`Player wins this round. Rock beats scissors!`);
     } else if (humanChoice === 1 && computerChoice === 0) {
         winner = "player";
         console.log(`Player wins this round. Paper beats rock!`);
-        alert(`Player wins this round. Paper beats rock!`);
     } else if (humanChoice === 1 && computerChoice === 1) {
         winner = "draw";
     } else if (humanChoice === 1 && computerChoice === 2) {
         winner = "computer";
         console.log(`Computer wins this round. Scissors beat paper!`);
-        alert(`Computer wins this round. Scissors beat paper!`);
     } else if (humanChoice === 2 && computerChoice === 0) {
         winner = "computer";
         console.log(`Computer wins this round. Rock beats scissors!`);
-        alert(`Computer wins this round. Rock beats scissors!`);
     } else if (humanChoice === 2 && computerChoice === 1) {
         winner = "player";
         console.log(`Player wins this round. Scissors beat paper!`);
-        alert(`Player wins this round. Scissors beat paper!`);
     } else if (humanChoice === 2 && computerChoice === 2) {
         winner = "draw";
     }
@@ -124,7 +118,6 @@ function playGame() {
             console.log(`Computer score: ${computerScore}`);
         } else if (roundWinner === "draw") {
             console.log(`Draw!`);
-            alert(`Draw! Go again.`);
             continue;
         }
         // IF player has 5 then player wins 
