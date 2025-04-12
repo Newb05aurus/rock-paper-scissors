@@ -27,8 +27,15 @@ function getComputerChoice() {
 
 
 function playRound(humanChoice, computerChoice) { 
+
+    if (playerScore === 5 || computerScore === 5){
+        playerScore = 0;
+        computerScore = 0;
+        playerScoreBox.textContent = "You:";
+        computerScoreBox.textContent = "Computer:";
+    }
     
-    
+    finalResultsBox.textContent = "Result:"
     
     if (scoreContainerBox.contains(drawText)){
         
@@ -100,9 +107,9 @@ function checkScoreForWinner() {
     
     
     if (playerScore === 5) {
-        finalResultsBox.textContent = " You win!";
+        finalResultsBox.textContent = "Result: You win!";
     } else if (computerScore === 5) {
-        finalResultsBox.textContent = "Computer wins. Nice try!";
+        finalResultsBox.textContent = "Result: Computer wins. Nice try!";
     }
 }
 
