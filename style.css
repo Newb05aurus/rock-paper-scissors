@@ -4,3 +4,7 @@ img {
     margin: 75px;
 }
 
+body {
+    background-color: black;
+    color: white;
+}
